@@ -1,0 +1,9 @@
+[user]
+	name = mlieshoff
+	email = michaellieshoff@gmx.de
+
+[credential]
+	helper = cache
+
+[core]
+  excludesfile = ~/.gitignore_global

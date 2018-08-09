@@ -1,0 +1,19 @@
+- name: Install Yarn Key
+  get_url: 
+    url: https://dl.yarnpkg.com/debian/pubkey.gpg
+    dest: /tmp/pubkey.gpg
+    
+- name: Add a key from a file on the Ansible server.
+  apt_key:
+    data: "{{ lookup('file', '/tmp/pubkey.gpg') }}"
+    state: present
+
+- name: Add repository
+  apt_repository: 
+    repo: deb  https://dl.yarnpkg.com/debian/ stable main
+    state: present
+
+- name: Install Yarn
+  apt:
+    name: yarn
+    state: present

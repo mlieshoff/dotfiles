@@ -1,0 +1,20 @@
+---
+- name: Configure working PC
+  hosts: localhost
+  remote_user: root
+  become: yes
+  roles:
+    - upgrade
+    - apache2
+    - docker
+    - postgres
+    - java
+    - maven
+#    - intellij
+    - sublime
+    - mc
+    - curl
+#    - postman
+    - yarn
+
+

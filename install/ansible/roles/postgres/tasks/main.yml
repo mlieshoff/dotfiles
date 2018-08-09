@@ -1,0 +1,14 @@
+- name: Install Postgres
+  apt:
+    name: postgresql
+    state: present
+
+- name: Install Postgres Contrib
+  apt:
+    name: postgresql-contrib
+    state: present
+
+- name: Install Postgres Admin
+  apt:
+    name: pgadmin3
+    state: present
