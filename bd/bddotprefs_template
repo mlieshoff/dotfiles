@@ -1,0 +1,7 @@
+HOME_DIR=
+
+DEV_DIR=$HOME_DIR/dev
+
+IDEA_HOME=$HOME_DIR/software/idea-IU-182.3684.101
+
+MYSQL_HOME=

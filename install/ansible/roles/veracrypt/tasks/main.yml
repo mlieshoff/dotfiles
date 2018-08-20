@@ -1,0 +1,10 @@
+---
+- name: Add repository
+  apt_repository: 
+    repo: ppa:unit193/encryption
+    state: present
+
+- name: Install VeraCrypt
+  apt:
+    name: veracrypt
+    state: present

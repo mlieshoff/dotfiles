@@ -1,0 +1,5 @@
+---
+- name: Install MySql-Client
+  apt:
+    name: mysql-client
+    state: present
