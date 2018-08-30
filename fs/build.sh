@@ -7,5 +7,5 @@ source ~/.dotfileprefs
 echo starting build web: $DEV_DIR
 
 cd $DEV_DIR/web
-mvn clean install -Dskip.tests=true
+mvn clean install -DskipTests
 cd ~
