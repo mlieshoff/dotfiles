@@ -1,12 +1,16 @@
-mysql:
-  container_name: mysql
-  restart: always
-  image: mysql:latest
-  environment:
-    MYSQL_ROOT_PASSWORD: 'root' # TODO: Change this
-    MYSQL_USER: 'root'
-    MYSQL_PASS: 'root'
-  volumes:
-    - ./data:/var/lib/mysql
-  ports: 
-    - "3306:3306"
+version: '3.3'
+
+services:
+   db:
+     image: mysql:5.7
+     volumes:
+       - mydata:/var/lib/mysql
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: somewordpress
+       MYSQL_DATABASE: wordpress
+       MYSQL_USER: wordpress
+       MYSQL_PASSWORD: wordpress
+
+volumes:
+    mydata:
