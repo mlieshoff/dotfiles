@@ -14,3 +14,10 @@ services:
 
 volumes:
     mydata:
+
+networks:
+  default:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.33.0.0/16
