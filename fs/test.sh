@@ -6,6 +6,6 @@ source ~/.dotfileprefs
 
 echo starting unit tests: $DEV_DIR
 
-cd $DEV_DIR/web
+cd $DEV_DIR/$1
 mvn clean install 
 cd ~
