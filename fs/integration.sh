@@ -4,8 +4,8 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 
 source ~/.dotfileprefs
 
-echo start integration tests: $DEV_DIR
+echo start integration tests: $DEV_DIR/$1
 
-cd $DEV_DIR/web
+cd $DEV_DIR/$1
 mvn -Pint,default,db-init package
 cd ~
