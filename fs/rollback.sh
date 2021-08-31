@@ -7,5 +7,6 @@ source ~/.dotfileprefs
 echo starting rollback: $DEV_DIR/$1
 
 cd $DEV_DIR/$1
+#mvn -Pdefault,db-rollback clean package -DskipTests -DrollbackCount=$2
 mvn -Pdefault,db-rollback clean package -DskipTests -DrollbackCount=$2
 cd ~
